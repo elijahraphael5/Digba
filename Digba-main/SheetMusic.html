@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Digba | SheetMusic</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="Abouthero">
+        <nav>
+            <h2 class="logo"> <a href="index.html">Digba</a></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Video</a></li>
+                <li><a href="SheetMusic.html">Music Sheet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="toggle_btn">
+                <i class="fa-sharp fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </nav>  
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="calendar.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="videos.html">Video</a></li>
+            <li><a href="SheetMusic.html">Music Sheet</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+        </div> 
+    </div>
+    <div class="icon">
+        <a href="https://www.facebook.com/ogunbiyi.timothy?mibextid=LQQJ4d"><i class="fa-brands fa-square-facebook" style="color: #fafafa;"></i></a>
+        <a href="https://instagram.com/digba_ogunbiyi?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></i></a>
+        <a href="https://youtube.com/@digbaogunbiyi2221"><i class="fa-brands fa-square-youtube" style="color: #fafafa;"></i></a>
+    </div>
+    <script>
+        const toggle_btn = document.querySelector('.toggle_btn')
+        const toggle_btnicons = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggle_btn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isOpen = dropdown_menu.classList.contains('open')
+
+            toggle_btnicons.classList = isOpen
+                ? 'fa-sharp fa-solid fa-close'
+                : 'fa-sharp fa-solid fa-bars'
+
+                if (!isOpen) {
+            toggle_btnicons.classList.add('fa fa-bars')
+            }
+        }
+    </script>  
+</body>
+</html>

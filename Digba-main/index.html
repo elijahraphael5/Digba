@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Digba | Home</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        /* Styling for the popup box */
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            z-index: 999; /* Ensure it's on top */
+            animation: glow 1.5s infinite alternate; /* Glowing effect */
+        }
+
+        /* Style for the link */
+        .popup a {
+            color: #fff; /* White link text color */
+            text-decoration: underline;
+        }
+        
+
+        /* Glowing animation */
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(49, 122, 84, 0.8), 0 0 30px rgba(4, 171, 193, 0.6), 0 0 40px rgba(201, 1, 1, 0.4);
+            }
+        }
+
+      
+         /* Media query for smaller screens */
+         @media (max-width: 600px) {
+            .popup {
+                right: 5px; /* Adjust positioning for smaller screens */
+                font-size: 10px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+ 
+</head>
+<body>
+    
+    <header>
+    <div class="hero">
+        <nav>
+            <h2 class="logo"> <a href="index.html">Digba</a></h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Video</a></li>
+                <li><a href="SheetMusic.html">Music Sheet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+           
+            <div class="toggle_btn">
+                <i class="fa fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </nav>
+    <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="calendar.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="videos.html">Video</a></li>
+        <li><a href="SheetMusic.html">Music Sheet</a></li>
+        <li><a href="contact.html">Contact</a></li> 
+    </div>
+   
+        <br><br><br><br><br><br><br><br>
+        <div class="container">
+        <h1 class="animate__animated animate__bounce animate__delay-2s">Digba Ogunbiyi</h1>
+        <h5 class="animate__animated animate__bounce animate__delay-2s"> Pianist | Composer</h5>
+        </div>
+    </div>
+    </header>
+    <div class="social">
+        <a class="icon" href="https://www.facebook.com/ogunbiyi.timothy?mibextid=LQQJ4d"><i class="fa-brands fa-square-facebook" style="color: #fafafa;"></i></a> 
+        <a class="icon" href="https://instagram.com/digba_ogunbiyi?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></i></a>
+        <a class=on" href="https://youtube.com/@digbaogunbiyi2221"><i class="fa-brands fa-square-youtube" style="color: #fafafa;"></i></a>
+    </div>
+    
+    <div class="popup" id="popup">
+        <p>Check my upcoming events <a href="calendar.html" onclick="closePopup()">here</a></p>
+    </div>
+
+    <script>
+        // JavaScript functions to open and close the popup
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+
+            // Schedule the popup to open again after 5 seconds
+            setTimeout(function() {
+                openPopup();
+            }, 5000);
+        }
+
+        // Call openPopup initially when the page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            openPopup();
+        });
+    </script>
+
+    <script>
+        const toggle_btn = document.querySelector('.toggle_btn')
+        const toggle_btnicons = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggle_btn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isOpen = dropdown_menu.classList.contains('open')
+
+            toggle_btnicons.classList = isOpen
+            ? 'fa fa-close'
+            : 'fa fa-bars'
+
+            if (!isOpen) {
+            toggle_btnicons.classList.add('fa fa-bars')
+            }
+        }
+    </script>  
+    
+    
+    
+
+</body>
+
+</html>

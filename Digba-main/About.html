@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digba | About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Abouthero">
+        <nav>
+            <h2 class="logo"> <a href="index.html">Digba</a></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="calendar.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Video</a></li>
+                <li><a href="SheetMusic.html">Music Sheet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="toggle_btn">
+                <i class="fa-sharp fa-solid fa-bars" style="color: #ffffff;"></i>
+            </div>
+        </nav>   
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="calendar.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="videos.html">Video</a></li>
+            <li><a href="SheetMusic.html">Music Sheet</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+        </div>
+    </div>
+<div class="startabout">
+    <div class="h1">
+    <h1>Biography</h1>
+    </div>
+    <div class="photo">
+        <img src="about.jpg" alt="Digba">
+    </div>
+        <div class="section">
+                <h4>
+                Digba Ogunbiyi was born in Lagos, Nigeria. His parents recall that he started making rhythmic sounds with random objects at the age of 5. At age 7, he started playing drums at the local church where his parents attended. 
+
+                After completing secondary school, Digba studied at the peter King college of music Lagos, and was then awarded full scholarship to study at the Music society of Nigeria. 
+                 <br><br>
+                While studying for a degree at the University of Lagos, Digba became an active voice in the Nigerian Music scene working with Artists like Lagbaja, Etuk Ubong, The Cavemen, Perpetual Atife and Michael Oloyede performing in various venues and festivals such as the Lagos Jazz festival, Satchmo international Jazz festival, Lagos Jazz Series and the Abuja international Jazz Festival. 
+                 
+                In 2016, Digba visited NYC briefly to study at the New York jazz workshop where he studied with pianists Frank Kimbrough and Amina Figarova. During this visit, he met renowned pianist James Frances whom he also had the opportunity of taking lessons from. 
+                <br>
+                <br>
+                Digba traveled back to the U.S in the fall of 2017. During this visit, he auditioned with Dr Min Kim and was awarded scholarship to study with pianist Allen Farnham at the New Jersey City University. Upon completion of a Master’s degree, Digba was admitted to the prestigious Eastman School of School for a DMA degree where he studies with Gary Versace.
+                Since moving to the U.S, he has had the opportunity of working with several artists such as John Benitez, Dave Rivello, Steven Bryant, Clay Jenkins and Thank you scientist performing in various venues and festivals across the country. 
+                <br><br>
+                His Debut Album Ade’digba was released in 2020 and has been described as an eclectic blend of Yoruba rhythms and western harmonies. As a bandleader, Digba performs primarily with his quartet consisting of Jalin Shiver, Chris paredes and Bill Moring.
+                He is a recipient of several awards including Music Quest award (piano category) , Steinway and Sons award for piano proficiency, Ray Wright Prize and many more.
+                </h4>
+        </div>
+</div>    
+    <script>
+        const toggle_btn = document.querySelector('.toggle_btn')
+        const toggle_btnicons = document.querySelector('.toggle_btn i')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggle_btn.onclick = function () {
+            dropdown_menu.classList.toggle('open')
+            const isOpen = dropdown_menu.classList.contains('open')
+
+            toggle_btnicons.classList = isOpen
+                ? 'fa-sharp fa-solid fa-close'
+                : 'fa-sharp fa-solid fa-bars'
+                
+            if (!isOpen) {
+                toggle_btnicons.classList.add('fa fa-bars')
+            }
+        }
+    </script> 
+</div>
+</div> 
+</body>
+</html>

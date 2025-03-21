@@ -313,7 +313,7 @@ nav ul li a:hover {
 /***evnts***/
 .page {
   width: 100%;
-  min-height: 90vh;
+  min-height: 90dvh;
   background-color: black;
 }
 .eventgrid {
@@ -336,6 +336,9 @@ nav ul li a:hover {
     > span {
       font-size: 0.8vw;
       color: white;
+    >a {
+      color: white;
+      }
     }
   }
 }
